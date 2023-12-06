@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+    <head>
+
+        <title>Online shopping for Women, Men and Kids</title>
+
+        <style>
+
+            .navbar{
+
+                text-align: center;
+                position:fixed;                /*otherwise the nav bar will float in the center*/
+                top: 0;                        /* to give no padding*/
+                right: 0px;
+                left: 0px;
+                box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+                height: 75px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .logo{
+                padding-top: 17.5px;
+                padding-left: 18px;
+            }
+
+            .nav-list{
+                display: inline;
+                text-transform: uppercase;
+                font-weight:750;
+                font-size: small;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 30px;
+            }
+
+            a {
+                color: black;
+                padding: 30px 10px;
+            }
+            a:link {
+                text-decoration: none;
+            }
+            a:hover{
+                background-color: whitesmoke;
+            }
+
+            .list{
+                display: inline;
+                font-weight:bold;
+                margin: 30px;
+            }
+
+            .grey{
+              color: grey;
+            }
+
+            .search{
+                width: 450px;
+                height: 30px;
+                padding: 7px 17px;
+                border: 0.5px solid #f5f5f5;
+                background: #f5f5f5;
+                border-radius: 5px;
+                display: flex;
+                float:right;
+                }
+
+                .ss{
+                    padding-top: 22px;
+                }
+
+                #bb{}
+
+                * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+        </style>
+
+    </head>
+
+    <body bgcolor="white">
+        
+        <!-- Nav Bar -->
+        <div class="navbar">
+
+            <div class="logo">
+            <img src="myntra.png" height="40px">
+            </div>                                       
+            
+            <div class="nav-list">
+                &ensp;&ensp;&ensp;&ensp;
+                <a href="#">Home</a> 
+                <a href="C:\xampp\htdocs\login-registration\login.php">Login</a> 
+                <a href="#">About</a> 
+            </div>
+            
+            <div class="ss">
+            <input class="search" placeholder="Search for wine, brands and more" value="">
+            </div>
+
+            <div class="profile list"><a href="#">Profile</a></div> 
+            <div class="wishlist list"><a href="#">Wishlist</a></div> 
+            <div class="bag list"><a href="#">Bag</a></div> 
+
+        </div>
+         
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="random">
+          <img src="random.png" height="50px">
+        </div>
+
+        <!-- Slide show -->
+        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="image2.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="background.jpeg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="image1.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+  let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- NEHAL IS DOING IT -->
+
+        <h2 style="font-family: Arial, Helvetica, sans-serif;font-style: initial;padding-left: 24px;">B E S T &ensp; O F &ensp; M Y N T R A &ensp; E X C L U S I V E &ensp; B R A N D S</h2>
+    <div id="bb">
+        <img src="Screenshot 2023-05-24 173627.png">
+        <img src="Screenshot 2023-05-24 173722.png">
+        <img src="Screenshot 2023-05-24 175637.png">
+        <img src="Screenshot 2023-05-24 180015.png">
+        <img src="Screenshot 2023-05-24 180222.png">
+        <img src="Screenshot 2023-05-24 180327.png">
+        <img src="Screenshot 2023-05-24 180514.png">
+        <img src="Screenshot 2023-05-24 181518.png">
+        <img src="Screenshot 2023-05-24 181740.png">
+        <img src="Screenshot 2023-05-24 181819.png">
+        <img src="Screenshot 2023-05-24 181857.png">
+        <img src="Screenshot 2023-05-24 181925.png">
+
+    </div>
+    <h2 style="font-family: Arial, Helvetica, sans-serif;font-style: initial;padding-left: 24px;">T O P &ensp; P I C K S</h2>
+    <div id="bb">
+        <img src="Screenshot 2023-05-24 182431.png">
+        <img src="Screenshot 2023-05-24 182504.png">
+        <img src="Screenshot 2023-05-24 182553.png">
+        <img src="Screenshot 2023-05-24 182633.png">
+        <img src="Screenshot 2023-05-24 182723.png">
+        <img src="Screenshot 2023-05-24 182812.png">
+    </div>
+    <h2 style="font-family: Arial, Helvetica, sans-serif;font-style: initial;padding-left: 24px;">C A T E G O R I E S &ensp; T O &ensp; B A G</h2>
+    <div id="bb">
+        <img src="Screenshot 2023-05-24 183907.png">
+        <img src="Screenshot 2023-05-24 183945.png">
+        <img src="Screenshot 2023-05-24 184018.png">
+        <img src="Screenshot 2023-05-24 184129.png">
+        <img src="Screenshot 2023-05-24 184156.png">
+        <img src="Screenshot 2023-05-24 184226.png">
+    </div>
+    <div id="bb">
+        <img src="Screenshot 2023-05-24 214413.png">
+        <img src="Screenshot 2023-05-24 214449.png">
+        <img src="Screenshot 2023-05-24 214519.png">
+        <img src="Screenshot 2023-05-24 214623.png">
+        <img src="Screenshot 2023-05-24 214700.png">
+        <img src="Screenshot 2023-05-24 214730.png">
+    </div>
+    <div id="bb">
+        <img src="Screenshot 2023-05-24 214805.png">
+        <img src="Screenshot 2023-05-24 214838.png">
+        <img src="Screenshot 2023-05-24 214911.png">
+        <img src="Screenshot 2023-05-24 214953.png">
+        <img src="Screenshot 2023-05-24 215031.png">
+        <img src="Screenshot 2023-05-24 215111.png">
+        <img src="Screenshot 2023-05-24 215150.png">
+        <img src="Screenshot 2023-05-24 215226.png">
+        <img src="Screenshot 2023-05-24 214413.png">
+        <img src="Screenshot 2023-05-24 214449.png">
+        <img src="Screenshot 2023-05-24 214519.png">
+        <img src="Screenshot 2023-05-24 214623.png">
+    </div>
+    <h2 style="font-family: Arial, Helvetica, sans-serif;font-style: initial;padding-left: 24px;">D E A L S   &ensp; O N  &ensp;  T O P  &ensp;  B R A N DS</h2>
+<div id="bb">
+    <img src="Screenshot 2023-05-24 224252.png">
+    <img src="Screenshot 2023-05-24 224324.png">
+    <img src="Screenshot 2023-05-24 224351.png">
+    <img src="1.png">
+    <img src="2.png">
+    <img src="3.png">
+    <img src="4.png">
+    <img src="5.png">
+    <img src="6.png">
+    <img src="7.png">
+    <img src="9.png">
+    <img src="10.png">
+</div>
+        
+        </div>
+    </body>
+</html>

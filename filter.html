@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('473240.jpg'); /* Replace 'your-background-image.jpg' with your actual image file */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #afb0ab; /* Light gray */
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9); /* Glassmorphism background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #5a1814; /* Dark red */
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #302a1d; /* Dark brown */
+        }
+
+        input,
+        select,
+        button {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc; /* Light gray */
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        select {
+            background-color: #f1eee6; /* Light beige */
+        }
+
+        button {
+            background-color: #a53333; /* Wine red */
+            color: #f1eee6; /* Light beige */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a1814; /* Dark red */
+        }
+    </style>
+    <title>Wine Cellar</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Filter Wines</h2>
+        <form action="wine2.php" method="post">
+            <label for="vintage_filter">Vintage:</label>
+            <input type="number" name="vintage_filter">
+
+            <label for="vegan_filter">Vegan:</label>
+            <select name="vegan_filter">
+                <option value="all">All</option>
+                <option value="vegan">Vegan</option>
+                <option value="non_vegan">Non-Vegan</option>
+            </select>
+
+            <label for="alcohol_content_filter">Alcohol Content:</label>
+            <input type="text" name="alcohol_content_filter">
+            
+            <button type="submit" name="filter_wines">Filter Wines</button>
+        </form>
+    </div>
+</body>
+</html>

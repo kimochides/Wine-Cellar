@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Details</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('473240.jpg'); /* Replace 'your-background-image.jpg' with your actual image file */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9); /* Glassmorphism background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #5a1814; /* Dark red */
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #302a1d; /* Dark brown */
+        }
+
+        input {
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #a53333; /* Wine red */
+            color: #f1eee6; /* Light beige */
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5a1814; /* Dark red */
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Wine</h2>
+        <form action="wine1.php" method="post" class="form1">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="winery">Winery:</label>
+            <input type="text" name="winery" required>
+
+            <label for="vintage">Vintage:</label>
+            <input type="number" name="vintage" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" required>
+
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" name="price" required>
+
+            <label for="alcohol_content">Alcohol Content:</label>
+            <input type="text" name="alcohol_content" required>
+
+            <label for="vegan">Vegan:</label>
+            <input type="checkbox" name="vegan">
+
+            <label for="type_of_wine">Type of Wine:</label>
+            <select name="type_of_wine" required>
+                <option value="red">Red</option>
+                <option value="white">White</option>
+                <option value="rosé">Rosé</option>
+            </select>
+
+            <input type="submit" value="Add Wine">
+        </form>
+    </div>
+</body>
+</html>
